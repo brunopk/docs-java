@@ -1,6 +1,6 @@
 # Spring
 
-Examples and documentation on different Spring topics, for a specific topic refer to the corresponding sub-folders and files in [`/spring/`](/spring/).
+Examples and documentation on different Spring topics, for a specific topic refer to the corresponding sub-folders and files.
 
 ## Responder con archivos
 
