@@ -14,7 +14,7 @@ public @ResponseBody byte[] getFile() throws IOException {
 }
 ```
 
-### Scheduled tasks
+## Scheduled tasks
 
 ```java
 package com.yourpackage;
