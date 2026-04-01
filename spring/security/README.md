@@ -5,7 +5,7 @@ Examples and documentation on different security related topics. For a specific 
 
 Take into account that to authenticate endpoints in Spring 3, some configurations must be done. These configurations are different to [configurations in previous versions of Spring](https://www.baeldung.com/spring-deprecated-websecurityconfigureradapter) based on extending `WebSecurityConfigurerAdapter` which is deprecated in newer versions. The provided configurations below are suitable for custom security configurations. In general, these configurations are commonly used for basic authorization with a username and password, as well as other standard or common methods of authorization.
 
-## Implementing and setting a custom version of the Authentication
+## Implementing and setting an implementation of the Authentication class
 
 **This way of configuring authentication is not recommended for production** as it consists of manually modifying request context with a custom extension of `Authentication` interface. The common way to do this is relying on Spring, for example through OAuth, to set important authentication information such as the user (principal).
 
