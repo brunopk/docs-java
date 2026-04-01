@@ -2,7 +2,7 @@
 
 General Java examples and documentation on different topics. For specific topics navigate through the corresponding sub-folders.
 
-# GZIP decompression
+## GZIP decompression
 
 ```java
 import java.util.Base64;
