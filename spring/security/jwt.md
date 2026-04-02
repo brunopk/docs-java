@@ -1,8 +1,8 @@
 # JWT
 
-## Creating and validating a signed JWT token (1)
+## Creating and validating a signed JWT token with a custom filter
 
-Steps to create a signed JWT token using `io.jsonwebtoken` :
+Steps to create and validate signed JWT tokens with a **custom filter** using `io.jsonwebtoken` :
 
 1. Create the signing key with `openssl` command (it's recommended to store this key in application properties).
 2. Include `io.jsonwebtoken` dependencies (refer to [`pom.xml`](https://github.com/brunopk/mis-gastos-backend/commit/c1a1dbc619fdfbcbca2ed6d4078e1cd4afb28096#diff-e65985dc2a105850c4dd749631555ca777f97f1a9a5e8fca45eecdb528e9ff7a) as an example).
@@ -10,7 +10,7 @@ Steps to create a signed JWT token using `io.jsonwebtoken` :
 4. Set the filter in the filter chain ([line 38 of `SecurityConfig`](https://github.com/brunopk/mis-gastos-backend/blob/c1a1dbc619fdfbcbca2ed6d4078e1cd4afb28096/src/main/java/com/bruno/misgastos/config/SecurityConfig.java#L38)).
 5. Define a function to generate JWT tokens and invoke this function to return this token to users ([line 47 of `OAuth2ServiceImpl`](https://github.com/brunopk/mis-gastos-backend/commit/c1a1dbc619fdfbcbca2ed6d4078e1cd4afb28096#diff-1ba61cf3c87c78f179197d746ca77cb4833ef9dca3a518a8d99d43ac752a682bR47))
 
-All files linked above were extracted from the [c1a1dbc](https://github.com/brunopk/mis-gastos-backend/commit/c1a1dbc619fdfbcbca2ed6d4078e1cd4afb28096) commit in https://github.com/brunopk/mis-gastos-backend.
+All files linked above were extracted from https://github.com/brunopk/mis-gastos-backend.
 
 ## Links
 
@@ -18,11 +18,11 @@ All files linked above were extracted from the [c1a1dbc](https://github.com/brun
 - [Stack overflow: My CustomAuthenticationProvider is not getting called](https://stackoverflow.com/questions/75516863/my-customauthenticationprovider-is-not-getting-called).
 - [Stack overflow: Spring Security blocks POST requests despite SecurityConfig](https://stackoverflow.com/questions/51026694/spring-security-blocks-post-requests-despite-securityconfig).
 
-## Creating and validating a signed JWT token (2)
+## Creating and validating a signed JWT token with filters provided by Spring
 
 This part principally shows how to create a JWT token and validate it **using filters provided by Spring** instead of creating a custom filter.
 
-It also shows how to validate a token by checking it contains a pre-defined (hardcoded) string in the JWT claims, that of course is just for learning purposes.
+It also shows how to validate a token by checking a pre-defined (hardcoded) string in the JWT claims, that may be **useful for learning or test purposes not for production**.
 
 1. Add the corresponding dependencies in `pom.xml` :
   
