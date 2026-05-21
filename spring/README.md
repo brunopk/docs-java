@@ -63,7 +63,7 @@ public class TestTasks {
 
 ```
 
-## Dynamically scheduling task
+## Dynamically scheduling a task
 
 Use case: when a user logs in, schedule a task to refresh the access token later.
 
