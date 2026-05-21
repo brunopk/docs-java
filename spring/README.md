@@ -62,3 +62,10 @@ public class TestTasks {
 }
 
 ```
+
+## Dynamically scheduling task
+
+Use case: when a user logs in, schedule a task to refresh the access token later.
+
+Refer to [`GoogleAuthServiceImpl.java`](https://github.com/brunopk/mis-gastos-backend/blob/c68459b6143ab20e7ecf834d222e7679d2b97840/src/main/java/com/bruno/misgastos/services/google/GoogleAuthServiceImpl.java) at [`c68459`](https://github.com/brunopk/mis-gastos-backend/blob/c68459b6143ab20e7ecf834d222e7679d2b97840) from [Mis gastos backend](https://github.com/brunopk/mis-gastos-backend).
+
